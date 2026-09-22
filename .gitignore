@@ -1,0 +1,36 @@
+# .gitignore — the "do not ship" list.
+# Anything matched here stays on your machine and never gets committed or published.
+# We keep it here as a teaching prop: this is how you avoid publishing junk or secrets.
+
+# --- Secrets & credentials (NEVER commit these) ---
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+
+# --- Operating system clutter ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editor / IDE files ---
+.vscode/
+.idea/
+*.swp
+
+# --- Python (you'll install this for Workshop 3; these are safe to ignore) ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# --- Node / JavaScript tooling (if any tool creates these) ---
+node_modules/
+
+# --- Large or generated data exports you don't want on the web ---
+# (the workshop CSV in data/ is synthetic — safe to commit — so it is intentionally NOT ignored)
+*.xlsx
+*.parquet
+exports/
